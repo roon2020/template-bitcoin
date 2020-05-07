@@ -1,0 +1,155 @@
+/*Barra de precio*/
+
+@mixin barra-precio () {
+    .slider-content{
+        width: 100%;
+            
+        h2{
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+            margin-left: 0.2rem;
+        }
+    
+        .slider{
+            
+            height: 13px;
+            position: relative;
+                   
+            .emptyprogress{
+                background: orange;
+                
+                cursor: pointer;
+                border-radius: 10px;
+                height: 40%;
+                top:25%;
+                position: absolute;
+                width: 100%;
+            
+                
+            }
+            .progress{
+                background: orange;
+                
+                cursor: pointer;
+                border-radius: 10px;
+                height: 40%;
+                top:30%;
+                position: absolute;
+                width: 0%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: -5px;
+                
+                
+            
+            }
+            .indicator{
+                cursor: move;
+                height: 100%;                    
+                left: 0%;
+                position: absolute;
+                width: 100%;
+                
+            }
+            .circle{
+                display: flex;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background: orange;
+                border-radius: 50%;              
+            }
+            .circle2{                    
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    
+    }
+    
+
+    
+    
+    
+    
+}
+
+
+/*logotipo*/
+@mixin logotipo($color) {
+    .site-logo{
+        padding: 1rem;
+        max-width: 30%;
+        
+        a{
+            text-decoration: none;
+            color:$color;
+            display: flex;
+            font-weight: bold;
+            line-height: 40px;
+            .logotipo{
+                display: block;
+                width: 40px;
+                height: 40px;
+                background-color: orange;
+                border-radius: 50%;
+                margin-right: 0.5rem;    
+        
+                i{
+                    padding: 0.5rem 0.6rem;
+                    font-size: 1.5rem;
+                    color: white;
+                    font-weight: 10px;
+                    
+                    
+                }
+            }
+        }
+        
+        
+    }
+    
+}
+
+/*header*/
+@mixin header () {
+  
+    .site-header-content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        
+   
+        @include logotipo(black);
+        
+        .site-menu{
+            padding-top: 0.66rem;
+            max-width: 60%;
+            
+            ul{
+                display: flex;
+                li{
+                    list-style: none;
+                    padding-right: 1rem;
+                    font-size: 1rem;
+                    &:nth-child(9){
+                        padding: 0 0.7rem;
+                    }
+                   
+                    a{
+                        text-decoration: none;
+                        color:black;
+                    }
+                }
+            }
+        }
+    }
+    
+}

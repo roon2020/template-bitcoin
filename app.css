@@ -1,0 +1,666 @@
+/*Barra de precio*/
+/*logotipo*/
+/*header*/
+/*Fuentes*/
+@font-face {
+  font-family: "Khalifah";
+  src: url(fonts/Khalifah.ttf);
+}
+
+/* CSS */
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.site-wrapper .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.site-wrapper .site-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 4rem;
+  border-bottom: 1px solid grey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.outer {
+  max-width: 1050px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Header*/
+.site-header-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+}
+
+.site-header-content .site-logo {
+  padding: 1rem;
+  max-width: 30%;
+}
+
+.site-header-content .site-logo a {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.site-header-content .site-logo a .logotipo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.site-header-content .site-logo a .logotipo i {
+  padding: 0.5rem 0.6rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 10px;
+}
+
+.site-header-content .site-menu {
+  padding-top: 0.66rem;
+  max-width: 60%;
+}
+
+.site-header-content .site-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-header-content .site-menu ul li {
+  list-style: none;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+.site-header-content .site-menu ul li:nth-child(9) {
+  padding: 0 0.7rem;
+}
+
+.site-header-content .site-menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.site-main {
+  width: 100%;
+  min-height: 200px;
+  border-top: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.site-main .site-aside {
+  width: 95%;
+  min-height: 50vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0rem 1rem 7rem 1.5rem;
+}
+
+.site-search {
+  padding-top: 40px;
+  background: white;
+  height: 50px;
+}
+
+.form {
+  width: 100%;
+  position: relative;
+}
+
+.form input[type="text"],
+.form input[type="submit"] {
+  border-radius: 5px;
+}
+
+.form input[type="text"] {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+}
+
+.form input[type="submit"] {
+  position: absolute;
+  width: 65px;
+  height: 40px;
+  border: none;
+  right: 0;
+  background: orange;
+  color: white;
+}
+
+.site-range-precie {
+  min-height: 65px;
+  margin-bottom: 1rem;
+}
+
+.site-range-precie .slider-content {
+  width: 100%;
+}
+
+.site-range-precie .slider-content h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+.site-range-precie .slider-content .slider {
+  height: 13px;
+  position: relative;
+}
+
+.site-range-precie .slider-content .slider .emptyprogress {
+  background: orange;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 40%;
+  top: 25%;
+  position: absolute;
+  width: 100%;
+}
+
+.site-range-precie .slider-content .slider .progress {
+  background: orange;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 40%;
+  top: 30%;
+  position: absolute;
+  width: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -5px;
+}
+
+.site-range-precie .slider-content .slider .indicator {
+  cursor: move;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+}
+
+.site-range-precie .slider-content .slider .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: orange;
+  border-radius: 50%;
+}
+
+.site-range-precie .slider-content .slider .circle2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.site-range-precie .slider-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-range-precie .slider-info .filter {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.site-range-precie .slider-info .range {
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+
+.site-range-precie .slider-info .range i {
+  font-size: 0.65rem;
+  font-family: Khalifah;
+  padding-right: 0.2rem;
+}
+
+.site-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.site-box .site-title-products {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-box .site-box-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.site-box .site-box-products .product-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.site-box .site-box-products .product-name .name {
+  color: orange;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.site-box .site-box-products .product-name .precie {
+  font-size: 0.7rem;
+}
+
+.site-box .site-box-products .product-name .precie span:nth-child(1) {
+  margin-right: 0.5rem;
+  text-decoration: line-through;
+}
+
+.site-box .site-box-products .product-name .precie span {
+  text-decoration: underline;
+}
+
+.site-box .site-box-products .product-image {
+  width: 30px;
+  height: 30px;
+}
+
+.site-box .site-box-products .product-image img {
+  width: 30px;
+  height: 30px;
+}
+
+.site-descript {
+  margin-top: 1rem;
+}
+
+.site-descript p {
+  font-size: 1.1rem;
+}
+
+.site-main-content .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-main-content .wrap .results h2 {
+  font-size: 1rem;
+  padding: 30px;
+}
+
+.site-main-content .wrap .sorting {
+  width: 30%;
+  margin: 30px;
+}
+
+.site-main-content .wrap .sorting .select-container {
+  border: 1ps solid #aaa;
+}
+
+.site-main-content .wrap .sorting .select-container select {
+  width: 100%;
+  font-size: 16px;
+  padding: 0.5rem;
+}
+
+.site-main-content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.site-main-content .cards .card {
+  width: 31%;
+  height: 21rem;
+  padding-right: 1rem;
+}
+
+.site-main-content .cards .card .card-image img {
+  width: 100%;
+}
+
+.site-main-content .cards .card .card-description .product-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.site-main-content .cards .card .card-description .product-name .name {
+  color: orange;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.site-main-content .cards .card .card-description .product-name .precie {
+  font-size: 0.9rem;
+}
+
+.site-main-content .cards .card .card-description .product-name .precie span:nth-child(1) {
+  margin-right: 0.5rem;
+  text-decoration: line-through;
+}
+
+.site-main-content .cards .card .card-description .product-name .precie span {
+  text-decoration: underline;
+}
+
+.site-footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-image: url("imagenes/image-footer.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.site-footer-container::after {
+  content: '\A';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
+}
+
+.site-footer-container img {
+  height: 100%;
+}
+
+.site-footer-container .footer-container-main {
+  width: 1050px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.header-footer {
+  margin: 2.3rem;
+  border-bottom: 0.2px solid gray;
+}
+
+.header-footer ul {
+  padding-left: 0.2rem;
+}
+
+.header-footer ul li {
+  list-style: none;
+}
+
+.header-footer ul li .link-header-footer {
+  text-decoration: none;
+  color: gray;
+}
+
+.header-footer ul li .link-header-footer span {
+  color: white;
+}
+
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 300px;
+}
+
+.card-footer .site-logo {
+  padding: 1rem;
+  max-width: 30%;
+}
+
+.card-footer .site-logo a {
+  text-decoration: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.card-footer .site-logo a .logotipo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.card-footer .site-logo a .logotipo i {
+  padding: 0.5rem 0.6rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 10px;
+}
+
+.card-footer p {
+  line-height: 1.3rem;
+  color: white;
+}
+
+.card-footer .foo {
+  width: 220px;
+  height: 200px;
+}
+
+.card-footer .foo h2 {
+  color: white;
+}
+
+.card-footer ul {
+  padding-left: 0;
+}
+
+.card-footer ul li {
+  padding: 0.4rem;
+  list-style: none;
+  color: white;
+}
+
+.card-footer ul li i {
+  color: orange;
+  padding-right: 0.2rem;
+}
+
+.card-footer .sociales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-footer .sociales .list-sociales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-footer .sociales .list-sociales li {
+  padding: 1rem;
+}
+
+.card-footer .sociales .list-sociales li a {
+  color: white;
+}
+
+.footer-copyrigth {
+  width: 1050px;
+  padding: 1rem;
+  color: white;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 0.2px solid gray;
+}
+
+.footer-copyrigth .copy {
+  padding: 1rem;
+}
+
+.footer-copyrigth .menu-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0rem;
+}
+
+.footer-copyrigth .menu-footer ul li {
+  list-style: none;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+.footer-copyrigth .menu-footer ul li:nth-child(9) {
+  padding: 0 0.7rem;
+}
+
+.footer-copyrigth .menu-footer ul li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.footer-copyrigth .menu-footer ul li a span {
+  color: orange;
+}
+/*# sourceMappingURL=app.css.map */
